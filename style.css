@@ -1,0 +1,179 @@
+@font-face {
+    src: url(./Karla/Karla-VariableFont_wght.ttf);
+    font-family: karla;
+}
+
+
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --cyan-lighter: hsla(179, 62%, 43%, 0.85);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --light-gray-rgba: hsla(203, 44%, 93%, 0.658);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --font-size: 16px;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+body {
+    font-family: karla;
+    font-size: var(--font-size);
+    background-color: var(--light-gray);
+}
+
+.container {
+    margin: 80px auto 80px auto;
+    width: 85%;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    padding: 2rem;
+}
+
+.card-1 {
+    background-color: white;
+    border-radius: 7px 7px 0 0;
+
+}
+
+.card-1 .card__title {
+    color: var(--cyan);
+    font-size: 1.3rem;
+    letter-spacing: .7px;
+    margin-bottom: 1.5rem;
+    font-weight: var(--font-weight-normal);
+
+}
+
+.card-1 .card__subtitle {
+    color: var(--bright-yellow);
+    margin-bottom: 1.5rem;
+}
+
+.card-1__desc {
+    color: var(--grayish-blue);
+    font-size: .8rem;
+    line-height: 1.3rem;
+}
+
+.card-2 {
+    background-color: var(--cyan);
+}
+
+.card-2 .card__title {
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: .7px;
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-normal);
+}
+
+.card-2__offer {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.card-2__price__tag {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-normal);
+    letter-spacing: 1.2px;
+    margin-right: 12px;
+
+}
+
+.card-2__time__tag {
+    color: var(--light-gray-rgba);
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.card-2__desc {
+    color: var(--light-gray);
+    font-size: 1rem;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.card-2__btn {
+    display: block;
+    width: 15rem;
+    padding: 1rem 0;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    letter-spacing: 1.2px;
+    background-color: var(--bright-yellow);
+    color: white;
+    font-size: .8rem;
+    text-align: center;
+    transition: all .6s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-2__btn:hover {
+
+    color: var(--bright-yellow);
+    background-color: white;
+
+}
+
+.card-3 {
+    background-color: var(--cyan-lighter);
+    color: white;
+}
+
+.card-3 .card__title {
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: .7px;
+    margin-bottom: 1rem;
+    font-weight: var(--font-weight-normal);
+}
+
+.card-3__desc {
+    font-size: .8rem;
+    color: var(--light-gray-rgba);
+}
+
+.card-3__desc:not(:last-of-type) {
+    margin-bottom: 7px;
+}
+
+@media screen and (min-width:650px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 640px;
+    }
+
+    .card-1 {
+        margin: auto;
+    }
+
+    .card-1 {
+        grid-column: 1/3;
+    }
+}
